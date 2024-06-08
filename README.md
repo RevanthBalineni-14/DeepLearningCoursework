@@ -138,3 +138,19 @@
 - **Dropout:** Slight drop in performance with validation accuracy of 89.36%.
 - **L2 Regularization:** Validation accuracy reduced to 88.32%, indicating over-penalization.
 - **Early Stopping:** Validation accuracy of 88.03%, suggesting potential for additional training.
+
+## Ultrasound Image Classification using ResNet-101
+
+This repository contains a deep learning model implemented in PyTorch for classifying ultrasound images into three categories: benign, malignant, and normal. The model architecture is based on ResNet-101, which has been customized for this specific task.
+
+### Dataset
+The dataset used for training and testing the model is the BUSI (Breast Ultrasound Images) dataset, containing ultrasound images of breast tissues with corresponding ground truth labels.
+
+### Data Preprocessing
+The images are preprocessed using OpenCV to resize them to a required size for the ResNet-101 model. Data augmentation techniques such as random horizontal and vertical flips, rotations, affine transformations, and color jittering are applied to increase the diversity of the training data.
+
+### Model Architecture
+The ResNet-101 model is customized with additional layers, including dropout, to enhance its performance for ultrasound image classification. The model is trained using cross-entropy loss and optimized using the Adam optimizer with a learning rate scheduler.
+
+### Training and Evaluation
+The dataset is split into training and testing sets, with 80% used for training and 20% for testing. The model is trained for 20 epochs, and its performance is evaluated on the test set to measure accuracy.
